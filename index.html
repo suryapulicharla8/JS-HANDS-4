@@ -163,14 +163,13 @@
             If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).</p>
         <pre>const isAllPass = (N, Arr) => 
           {
-            // let A=[0];
-            for(let i=1;i < Arr.length;i++){
-              if(Arr[0]>=32){
-                return "YES";
-              }else{
+            
+            for(let i=0;i < Arr.length;i++){
+              if(Arr[i] <= 32){
                 return "NO";
               }
             }  
+            return "YES"
           };
            </pre>
         <br>
@@ -185,6 +184,27 @@
             Prepbuddy wants you to find 
             M
             .</p>
+          <pre>function Unique_Shirts (arr,N) {
+            // let M=[1];
+            let count=0;
+            for(let i=0;i<N;i++){
+              flag=0;
+            for(let j=0;j<N;j++){
+              if(i!== j){
+                if(arr[i]===arr[j]){
+                  flag=1;
+                  break;
+                }
+              }
+            }
+            if(!flag){
+              count +=1;
+            }
+            }
+             return count;
+            }
+            
+          </pre>
         <br>
         <h4>10.Min and Max</h4>
         <p>Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.
@@ -230,6 +250,23 @@
             . 
             
             You must determine how many ways she can divide the chocolate.</p>
+      <pre>
+        function Birthday_Game(arr,D ,M) {
+          let count=0;
+           for(let i=0;i<=arr.length-M;i++){
+             let bar_sum=0;
+             for(let j=0;j < M;j++){
+                bar_sum +=arr[j+i];
+             }
+             if(bar_sum===D){
+               count +=1;
+             }
+           }
+           return count;
+         }
+         
+      </pre>
+          
         </div>
 </body>
 </html>
